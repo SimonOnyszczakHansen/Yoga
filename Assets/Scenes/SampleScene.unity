@@ -7296,6 +7296,7 @@ GameObject:
   - component: {fileID: 924875306}
   - component: {fileID: 924875305}
   - component: {fileID: 924875304}
+  - component: {fileID: 924875308}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -7344,7 +7345,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c994d22a9398f64d9292e3849f59f92, type: 2}
+  - {fileID: 2100000, guid: 56ab1d3e722793148b8c951b671370b7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7389,6 +7390,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &924875308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924875303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4de6c9cefb2cd746aeed2ee4bca9ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newBaseColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &931379610
 GameObject:
   m_ObjectHideFlags: 0
@@ -9446,6 +9460,7 @@ GameObject:
   - component: {fileID: 1230243599}
   - component: {fileID: 1230243598}
   - component: {fileID: 1230243597}
+  - component: {fileID: 1230243601}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -9494,7 +9509,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c994d22a9398f64d9292e3849f59f92, type: 2}
+  - {fileID: 2100000, guid: 56ab1d3e722793148b8c951b671370b7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9539,6 +9554,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1230243601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230243596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4de6c9cefb2cd746aeed2ee4bca9ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newBaseColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1241364534
 GameObject:
   m_ObjectHideFlags: 0
@@ -9551,6 +9579,7 @@ GameObject:
   - component: {fileID: 1241364537}
   - component: {fileID: 1241364536}
   - component: {fileID: 1241364535}
+  - component: {fileID: 1241364539}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -9599,7 +9628,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c994d22a9398f64d9292e3849f59f92, type: 2}
+  - {fileID: 2100000, guid: 56ab1d3e722793148b8c951b671370b7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9644,6 +9673,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1241364539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241364534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4de6c9cefb2cd746aeed2ee4bca9ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newBaseColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1254362822
 GameObject:
   m_ObjectHideFlags: 0
@@ -9656,6 +9698,7 @@ GameObject:
   - component: {fileID: 1254362825}
   - component: {fileID: 1254362824}
   - component: {fileID: 1254362823}
+  - component: {fileID: 1254362827}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -9704,7 +9747,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c994d22a9398f64d9292e3849f59f92, type: 2}
+  - {fileID: 2100000, guid: 56ab1d3e722793148b8c951b671370b7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9749,6 +9792,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1254362827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254362822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4de6c9cefb2cd746aeed2ee4bca9ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newBaseColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1255638673
 GameObject:
   m_ObjectHideFlags: 0
@@ -11989,6 +12045,7 @@ GameObject:
   - component: {fileID: 1587903131}
   - component: {fileID: 1587903130}
   - component: {fileID: 1587903129}
+  - component: {fileID: 1587903133}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -12037,7 +12094,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c994d22a9398f64d9292e3849f59f92, type: 2}
+  - {fileID: 2100000, guid: 56ab1d3e722793148b8c951b671370b7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12082,6 +12139,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1587903133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587903128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4de6c9cefb2cd746aeed2ee4bca9ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newBaseColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1595563443
 GameObject:
   m_ObjectHideFlags: 0
@@ -13129,7 +13199,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 6.747555e-38, z: 8.09e-43, w: 1.28e-43}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 8e-45, z: 1.2296e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -14734,6 +14804,7 @@ GameObject:
   - component: {fileID: 2059223540}
   - component: {fileID: 2059223539}
   - component: {fileID: 2059223538}
+  - component: {fileID: 2059223542}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -14782,7 +14853,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c994d22a9398f64d9292e3849f59f92, type: 2}
+  - {fileID: 2100000, guid: 56ab1d3e722793148b8c951b671370b7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14827,6 +14898,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2059223542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059223537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4de6c9cefb2cd746aeed2ee4bca9ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newBaseColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &2064529225
 GameObject:
   m_ObjectHideFlags: 0
@@ -17035,6 +17119,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2243020123108092049, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7277802327414017196, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7277802327414017196, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7277802327414017196, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7277802327414017196, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: m_BackGroundColor.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7434851320941268098, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
