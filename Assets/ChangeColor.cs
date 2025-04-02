@@ -24,7 +24,6 @@ public class ChangeColor : MonoBehaviour
     private int currentAudioIndex = 0;
     void Start()
     {
-        myMaterial.EnableKeyword("_EMISSION");
         StartCoroutine(ChakraColorChange());
     }
 
@@ -39,9 +38,9 @@ public class ChangeColor : MonoBehaviour
         {
             Color currentColor = chakraColors[currentColorIndex];
             myMaterial.color = currentColor;
-            myMaterial.SetColor("_EmissionColor", currentColor);
+            myMaterial.SetColor("_BackgroundColor", currentColor);
 
-            Thread.Sleep(2000);
+            yield return new WaitForSeconds(2f);
 
             PlayAudio(currentAudioIndex);
 
