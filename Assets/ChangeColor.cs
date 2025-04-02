@@ -1,39 +1,56 @@
 using System.Collections;
+using System.Threading;
 using UnityEngine;
 
 public class ChangeColor : MonoBehaviour
 {
-    [SerializeField]
-    private Material myMaterial;
+    [SerializeField] private Material myMaterial;
+    [SerializeField] private AudioSource myAudioSource;
+    [SerializeField] private AudioClip[] myAudioClips;
 
-    private Color[] chakraColor = new Color[]
+    private Color[] chakraColors = new Color[]
     {
-        new Color(0.8f, 0f, 0f), // Root Chakra – Deep Red
-        new Color(1f, 0.2f, 0f), // Sacral Chakra – Vivid Orange
-        new Color(1f, 0.85f, 0f), // Solar Plexus Chakra – Golden Yellow
-        new Color(0f, 0.8f, 0f), // Heart Chakra – Rich Green
-        new Color(0f, 0.8f, 0.8f), // Throat Chakra – Pure Turquoise
-        new Color(0f, 0f, 1f), // Third Eye Chakra – Deep Indigo
-        new Color(0.2f, 0f, 0.4f) // Crown Chakra – Soft Violet
+        new Color(0.8f, 0f, 0f), // Root Chakra – Red
+        new Color(1f, 0.2f, 0f), // Sacral Chakra – Orange
+        new Color(1f, 0.85f, 0f), // Solar Plexus Chakra – Yellow
+        new Color(0f, 0.8f, 0f), // Heart Chakra – Green
+        new Color(0f, 0.8f, 0.8f), // Throat Chakra – Light Blue
+        new Color(0f, 0f, 1f), // Third Eye Chakra – Indigo
+        new Color(0.2f, 0f, 0.4f) // Crown Chakra – Violet
 
     };
 
     private int currentColorIndex = 0;
-    private float colorChangeInterval = 2f;
+    private int currentAudioIndex = 0;
     void Start()
     {
+        myMaterial.EnableKeyword("_EMISSION");
         StartCoroutine(ChakraColorChange());
     }
 
-    IEnumerator ChakraColorChange()
+    void PlayAudio(int index)
+    {
+        myAudioSource.clip = myAudioClips[index];
+        myAudioSource.Play();
+    }
+    private IEnumerator ChakraColorChange()
     {
         while (true)
         {
-            myMaterial.color = chakraColor[currentColorIndex];
-            myMaterial.EnableKeyword("_EMISSION");
-            myMaterial.SetColor("_EmissionColor", chakraColor[currentColorIndex]);
-            currentColorIndex = (currentColorIndex + 1) % chakraColor.Length;
-            yield return new WaitForSeconds(colorChangeInterval);
+            Color currentColor = chakraColors[currentColorIndex];
+            myMaterial.color = currentColor;
+            myMaterial.SetColor("_EmissionColor", currentColor);
+
+            Thread.Sleep(2000);
+
+            PlayAudio(currentAudioIndex);
+
+            Debug.Log("Current Clip: " + currentAudioIndex  + " Current Color: " + currentColorIndex);
+
+            yield return new WaitForSeconds(myAudioClips[currentAudioIndex].length);
+
+            currentColorIndex = (currentColorIndex + 1) % chakraColors.Length;
+            currentAudioIndex = (currentAudioIndex + 1) % myAudioClips.Length;
         }
     }
 

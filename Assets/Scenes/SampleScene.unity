@@ -2404,6 +2404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myMaterial: {fileID: 2100000, guid: 56ab1d3e722793148b8c951b671370b7, type: 2}
+  colorChangeInterval: 0.001
 --- !u!1001 &358224100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12723,7 +12724,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: -7.4556997e-34, y: 5.642402e+30, z: 0, w: -5.8794233e-37}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 1.1e-44, z: 7.95e-42, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
