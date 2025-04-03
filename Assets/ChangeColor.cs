@@ -42,11 +42,22 @@ public class ChangeColor : MonoBehaviour
     {
         while (true)
         {
-            Color currentColor = chakraColors[currentColorIndex];
-            myMaterial.color = currentColor;
-            myMaterial.SetColor("_BackgroundColor", currentColor);
+            Color startColor = myMaterial.color;
+            Color targetColor = chakraColors[currentColorIndex];
+            float duration = 2.5f; // Duration of the fade
+            float elapsedTime = 0f;
 
-            yield return new WaitForSeconds(2f);
+            // Smoothly transition to the next color
+            while (elapsedTime < duration)
+            {
+                myMaterial.color = Color.Lerp(startColor, targetColor, elapsedTime / duration);
+                myMaterial.SetColor("_BackgroundColor", myMaterial.color);
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+
+            myMaterial.color = targetColor;
+            myMaterial.SetColor("_BackgroundColor", targetColor);
 
             PlayAudio(currentAudioIndex);
 
