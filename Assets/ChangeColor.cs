@@ -15,6 +15,7 @@ public class ChangeColor : MonoBehaviour
 
     private Color[] chakraColors = new Color[]
     {
+        new Color(0f, 0f, 0f), // Black for intro
         new Color(0.8f, 0f, 0f), // Root Chakra – Red
         new Color(1f, 0.2f, 0f), // Sacral Chakra – Orange
         new Color(1f, 0.85f, 0f), // Solar Plexus Chakra – Yellow
@@ -51,15 +52,15 @@ public class ChangeColor : MonoBehaviour
             while (elapsedTime < duration)
             {
                 myMaterial.color = Color.Lerp(startColor, targetColor, elapsedTime / duration);
-                myMaterial.SetColor("_BackgroundColor", myMaterial.color);
+                myMaterial.SetColor("_Color", myMaterial.color);
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
 
-            myMaterial.color = targetColor;
-            myMaterial.SetColor("_BackgroundColor", targetColor);
-
             PlayAudio(currentAudioIndex);
+
+            myMaterial.color = targetColor;
+            myMaterial.SetColor("_Color", targetColor);
 
             Debug.Log(
                 "Current Clip: " + currentAudioIndex + " Current Color: " + currentColorIndex
