@@ -2407,7 +2407,14 @@ MonoBehaviour:
   myMaterial: {fileID: 2100000, guid: 56ab1d3e722793148b8c951b671370b7, type: 2}
   myAudioSource: {fileID: 346304365}
   myAudioClips:
-  - {fileID: 8300000, guid: cebf6597c9bc53b40bb1bf9cbfe57188, type: 3}
+  - {fileID: 8300000, guid: dbcc2feef4f8479408804c6b59ce3ee2, type: 3}
+  - {fileID: 8300000, guid: 458e8ad6ca95f7d4cb4624889176bfa2, type: 3}
+  - {fileID: 8300000, guid: f8567fdc627a3114a8d94318e6a2dae4, type: 3}
+  - {fileID: 8300000, guid: 4b7525ee358588945a1f7b18b84bc418, type: 3}
+  - {fileID: 8300000, guid: 990911c0eed334b43b3b2860e7afb7c4, type: 3}
+  - {fileID: 8300000, guid: d64df49582d567e4b82970305cb2ff63, type: 3}
+  - {fileID: 8300000, guid: 45a5ab8ef06fbd046afd257686785b71, type: 3}
+  - {fileID: 8300000, guid: cd88bc7f53a89024eb3ad1c4d33882fe, type: 3}
 --- !u!82 &346304365
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12823,7 +12830,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 6e-45, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 1e-44, z: 2.0623e-41, w: 3.59e-43}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
