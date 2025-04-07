@@ -24,6 +24,7 @@ public class ChangeColor : MonoBehaviour
         new Color(0.4f, 0f, 0.925f), // Third Eye Chakra – Indigo
         new Color(0.3f, 0f, 0.5f), // Crown Chakra – Purple with a hint of White
     };
+    private Color chakraGradiant = new Color(0.5f, 0.5f, 0.5f); // Default color for the gradient
 
     private int currentColorIndex = 0;
     private int currentAudioIndex = 0;
