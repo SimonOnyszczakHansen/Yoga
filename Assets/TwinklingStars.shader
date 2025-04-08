@@ -4,6 +4,7 @@ Shader "Custom/TwinklingStars"
     {
         _StarColor ("Star Color", Color) = (1,1,1,1)
         _Color ("Background Color", Color) = (0,0,0,1)
+        _Color1 ("Star Color 1", Color) = (0,0,0,0)
         _StarDensity ("Star Density", Range(0, 1)) = 0.5
         _TwinkleSpeed ("Twinkle Speed", Range(0, 5)) = 1
         _Size ("Star Size", Range(0, 1)) = 0.05
@@ -35,7 +36,9 @@ Shader "Custom/TwinklingStars"
             };
 
             float4 _StarColor;
+            float4 _Color1;
             float4 _Color;
+            float _StarColorChangeSpeed;
             float _StarDensity;
             float _TwinkleSpeed;
             float _Size;
@@ -83,7 +86,7 @@ Shader "Custom/TwinklingStars"
 
                 star *= twinkle;
 
-                return lerp(_Color, _StarColor, star);
+                return lerp(_Color, _StarColor * (0.5 + 0.5 * _SinTime), star);
             }
             ENDCG
         }
