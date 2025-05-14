@@ -13,16 +13,16 @@ public class ChangeColor : MonoBehaviour
     [SerializeField]
     private AudioClip[] myAudioClips;
 
-    private Color[] chakraColors = new Color[]
+    private readonly Color[] chakraColors = new Color[]
     {
         new Color(0f, 0f, 0f), // Black for intro
-        new Color(0.8f, 0f, 0f), // Root Chakra – Red
-        new Color(1f, 0.2f, 0f), // Sacral Chakra – Orange
-        new Color(1f, 0.85f, 0f), // Solar Plexus Chakra – Yellow
-        new Color(0f, 0.8f, 0f), // Heart Chakra – Green
-        new Color(0.5f, 0.8f, 0.9f), // Throat Chakra – Light-Blue
-        new Color(0.4f, 0f, 0.925f), // Third Eye Chakra – Indigo
-        new Color(0.3f, 0f, 0.5f), // Crown Chakra – Purple with a hint of White
+        new Color(1f, 0f, 0f), // Root Chakra – Red
+        new Color(1f, 0.5f, 0f), // Sacral Chakra – Orange
+        new Color(1f, 0.902f, 0f), // Solar Plexus Chakra – Yellow
+        new Color(0f, 0.7961f, 0f), // Heart Chakra – Green
+        new Color(0.0588f, 0.5020f, 0.9490f), // Throat Chakra – Blue
+        new Color(0.4353f, 0f, 0.8706f), // Third Eye Chakra – Purple
+        new Color(0.85f, 0.684f, 0.75f)
     };
 
     private int currentColorIndex = 0;
@@ -61,10 +61,6 @@ public class ChangeColor : MonoBehaviour
 
             myMaterial.color = targetColor;
             myMaterial.SetColor("_Color", targetColor);
-
-            Debug.Log(
-                "Current Clip: " + currentAudioIndex + " Current Color: " + currentColorIndex
-            );
 
             yield return new WaitForSeconds(myAudioClips[currentAudioIndex].length);
 
