@@ -24,6 +24,7 @@ public class ChangeColor : MonoBehaviour
         new Color(0.4353f, 0f, 0.8706f), // Third Eye Chakra – Purple
         new Color(0.85f, 0.684f, 0.75f)
     };
+    private Color chakraGradiant = new Color(0.5f, 0.5f, 0.5f); // Default color for the gradient
 
     private int currentColorIndex = 0;
     private int currentAudioIndex = 0;
