@@ -17,10 +17,10 @@ public class ChangeColor : MonoBehaviour
     {
         new Color(0f, 0f, 0f), // Black for intro
         new Color(1f, 0f, 0f), // Root Chakra – Red
-        new Color(1f, 0.5f, 0f), // Sacral Chakra – Orange
-        new Color(1f, 0.902f, 0f), // Solar Plexus Chakra – Yellow
+        new Color(1f, 0.4f, 0f), // Sacral Chakra – Orange
+        new Color(1f, 0.7f, 0f), // Solar Plexus Chakra – Yellow
         new Color(0f, 0.7961f, 0f), // Heart Chakra – Green
-        new Color(0.0588f, 0.5020f, 0.9490f), // Throat Chakra – Blue
+        new Color(0.0470f, 0.4016f, 0.7592f), // Throat Chakra – Blue
         new Color(0.4353f, 0f, 0.8706f), // Third Eye Chakra – Purple
         new Color(0.85f, 0.684f, 0.75f)
     };
@@ -46,7 +46,7 @@ public class ChangeColor : MonoBehaviour
         {
             Color startColor = myMaterial.color;
             Color targetColor = chakraColors[currentColorIndex];
-            float duration = 2.5f; // Duration of the fade
+            float duration = 1.5f; // Duration of the fade
             float elapsedTime = 0f;
 
             // Smoothly transition to the next color
