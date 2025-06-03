@@ -13,6 +13,12 @@ public class ChangeColor : MonoBehaviour
     [SerializeField]
     private AudioClip[] myAudioClips;
 
+    [SerializeField]
+    private AudioSource backgroundAudioSource;
+
+    [SerializeField]
+    private AudioClip[] backgroundMusic;
+
     private readonly Color[] chakraColors = new Color[]
     {
         new Color(0f, 0f, 0f), // Black for intro
@@ -22,7 +28,7 @@ public class ChangeColor : MonoBehaviour
         new Color(0f, 0.7961f, 0f), // Heart Chakra – Green
         new Color(0.0470f, 0.4016f, 0.7592f), // Throat Chakra – Blue
         new Color(0.4353f, 0f, 0.8706f), // Third Eye Chakra – Purple
-        new Color(0.85f, 0.684f, 0.75f)
+        new Color(0.85f, 0.684f, 0.75f),
     };
     private Color chakraGradiant = new Color(0.5f, 0.5f, 0.5f); // Default color for the gradient
 
@@ -32,6 +38,20 @@ public class ChangeColor : MonoBehaviour
     void Start()
     {
         StartCoroutine(ChakraColorChange());
+    }
+
+    void PlayBackgroundMusic()
+    {
+        if (backgroundAudioSource != null && backgroundMusic != null)
+        {
+            backgroundAudioSource.clip = backgroundMusic[0];
+            backgroundAudioSource.loop = true; // Loop the background music
+            backgroundAudioSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning("Background audio source or music clip is not set.");
+        }
     }
 
     void PlayAudio(int index)
